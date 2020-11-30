@@ -41,7 +41,7 @@ def run_day(days, day_num):
 
   print(f'Day {day_num}')
   print(f'  Part 1: {part1_res} - {part1_time} ms')
-  print(f'  Part 2: {part2_res} - {part2_time} ms\n')
+  print(f'  Part 2: {part2_res} - {part2_time} ms')
 
 def run_all_days(days):
   day_keys = list(days.keys())
@@ -54,6 +54,7 @@ def parse_arguments():
   parser = argparse.ArgumentParser()
 
   parser.add_argument('-d', '--day', help='Specify a specific day', type=int)
+  parser.add_argument('-r', '--run', help='Alias for --day', type=int, dest='day')
   parser.add_argument('-c', '--create', help='Create a day folder from the template', type=int)
   parser.add_argument('-a', '--all', help='Run all days', action='store_true')
 
